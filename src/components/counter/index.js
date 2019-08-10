@@ -1,36 +1,26 @@
-import React from 'react'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-import * as counterActions from '../../actions/counterActions';
-import CounterForm from './counterForm';
+import React, { useCallback } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import CounterForm from "./counterForm";
+import * as types from "../../actions/actionTypes";
 
-export class CounterPage extends React.Component {
-  
- 
-  render() {   
-      return (
-          <CounterForm
-              count={this.props.count}              
-              onIncrement={this.props.actions.increment}              
-              onDecrement={this.props.actions.decrement}              
-          />
-      );
-  }
+export function CounterPage() {
+  const count = useSelector(state => state.counter.count);
+
+  const dispatch = useDispatch();
+  const incrementCounter = useCallback(
+    () => dispatch({ type: types.INCREMENT }),
+    [dispatch]
+  );
+
+  const decrementCounter = useCallback(
+    () => dispatch({ type: types.DECREMENT }),
+    [dispatch]
+  );
+  return (
+    <CounterForm
+      count={count}
+      onIncrement={incrementCounter}
+      onDecrement={decrementCounter}
+    />
+  );
 }
-
-const mapStateToProps = state => (   
-    {        
-  count: state.counter.count
-  
-})
-
-
-const mapDispatchToProps = dispatch =>   ({
-    actions: bindActionCreators(counterActions, dispatch)
-    }
-)
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(CounterPage);

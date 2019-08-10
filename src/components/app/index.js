@@ -1,33 +1,23 @@
-import React from 'react';
-import { Route } from 'react-router-dom'
-import CounterPage from '../counter/index'
-import About from '../about';
-import Header from '../common/Header';
-import {withRouter} from 'react-router';
-import { connect } from 'react-redux';
+import React from "react";
+import { Route, BrowserRouter } from "react-router-dom";
+import { CounterPage } from "../counter/index";
+import About from "../about";
+import Header from "../common/Header";
+
 
 const App = () => (
   <div>
-    <header>     
-        <Header/>
-    </header>
+    <BrowserRouter>
+      <header>
+        <Header />
+      </header>
 
-    <main>
-      <Route exact path="/" component={CounterPage} />
-      <Route exact path="/about-us" component={About} />      
-    </main>
+      <main>
+        <Route exact path="/" component={CounterPage} />
+        <Route exact path="/about-us" component={About} />
+      </main>
+    </BrowserRouter>
   </div>
-)
+);
 
-function mapStatesToProps(state, ownProps) {
-  return {
-      items: state.items
-  };
-}
-
-const mapDispatchToProps = dispatch => ({
- 
-}
-)
-
-export default withRouter(connect(mapStatesToProps, mapDispatchToProps)(App));
+export default App;
