@@ -4,9 +4,8 @@ import { ButtonToolbar } from 'react-bootstrap';;
 
 const CounterForm = ({ count, onIncrement, onDecrement, isIncrementing, isDecrementing }) => {
   return (
-    <div>
-      <h1>Counter</h1> 
-      <h2>Counter Value</h2>
+    <div className="container">
+      <h1>Counter</h1>      
       <p>Count: {count}</p>
       <ButtonToolbar>
         <button         
