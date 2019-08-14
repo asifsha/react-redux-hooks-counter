@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@testing-library/react": "^9.1.1",
     "connected-react-router": "^6.5.2",
     "history": "^4.9.0",
     "react": "^16.9.0",
@@ -13,7 +14,8 @@
     "react-router-redux": "^5.0.0-alpha.9",
     "react-scripts": "3.1.0",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "save": "^2.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
