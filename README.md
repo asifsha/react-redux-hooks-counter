@@ -1,3 +1,7 @@
-[Demo](https://codesandbox.io/s/github/asifsha/react-redux-counter)
+# React hooks with Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+![demo](https://raw.githubusercontent.com/asifsha/react-redux-hooks-counter/master/demo/hooks.png)
+
+![demo](https://raw.githubusercontent.com/asifsha/react-redux-hooks-counter/master/demo/demo.gif)
+
+
