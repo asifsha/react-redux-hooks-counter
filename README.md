@@ -22,7 +22,7 @@
 
 ## How to use
 Clone or fork this repo  
-cd foldername  
+cd *foldername*  
 npm install  
 npm start - starts developement server  
 npm test - Runs all tests including end to end test (for end to end test to pass make sure development server is runnning)  
